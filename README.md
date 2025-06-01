@@ -50,11 +50,15 @@ $ sudo ./setup.sh
 📊 SonarQube Setup
 
 $ sudo apt update
+
 $ sudo apt install -y docker.io
+
 $ sudo usermod -a -G docker ubuntu
+
 $ sudo docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 
 🔐 Jenkins Credentials to Configure
+
 SonarQube Token – Add as Secret Text
 
 DockerHub – Username/Password
@@ -70,5 +74,6 @@ SonarQube → Project Settings → Webhooks
 Add this webhook:
 
 http://<JENKINS_URL>:8080/sonarqube-webhook/
+
 Feel free to fork, modify, and contribute. Happy DevSecOps 🚀
 
